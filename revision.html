@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background: #2b2626;
+        color: white;
+
+    }
+</style>
+
+<body>
+
+</body>
+<script>
+    const fruits = ["Banana", "Orange", "Apple", "Mango", "guava"];
+    fruits.forEach(loop);
+    function loop(value) {
+        document.write(value + "<br>");
+    }
+    const vegetables = [10, 20, 30, 40, 50, 60];
+    const newarr = vegetables.map(function (valnew, ind) {
+        return valnew * 10;
+    });
+    console.log(vegetables);
+    console.log(newarr);
+
+
+    const student = [{ id: 1, name: "stud1", sub: "arts" },
+    { id: 2, name: "stud2", sub: "science" },
+    { id: 3, name: "stud4", sub: "security" },
+    { id: 4, name: "stud5", sub: "bio" },
+    { id: 5, name: "stud6", sub: "chem" },
+    { id: 6, name: "stud7", sub: "phy" },
+    { id: 7, name: "stud8", sub: "maths" },
+    { id: 8, name: "stud9", sub: "commerce" },
+    { id: 9, name: "stud10", sub: "enginner" },
+    { id: 10, name: "stud11", sub: "finance" },
+    { id: 11, name: "stud12", sub: "com" },
+    { id: 12, name: "stud13", sub: "comme" },
+    { id: 13, name: "stud14", sub: "law" },
+    ];
+    student.forEach(info);
+    function info(newval) {
+        console.log(newval.name,newval.sub);
+    }
+
+    /*
+    const studData= student.map(change);
+    function change (val){
+    return `my name is ${val.name}`
+    
+    }
+    console.log(studData);
+    /*
+        fruits.reverse();
+        console.log(fruits)
+    let ArrayFruit= Array.isArray(fruits);
+    console.log(ArrayFruit)
+       // const vegetables = ["tomato", "potato", "onion", "cauliflower", "cabage", "carrot"];
+        //const flowers = ["lotus", "rose", "sunflower"];
+        //const mix = fruits.concat(vegetables, flowers);
+        //console.log(mix);
+    */
+
+</script>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>email validation</title>
+</head>
+<style>
+#lblid{
+visibility: hidden;
+}
+</style>
+<body>
+    <h1>email validation</h1>
+    <form action="message.html" onsubmit="return validation()">
+  <input type="text" id="textid" placeholder="email">  
+  <label id="lblid"><i>invalid email</i></label><br>
+  <button type="submit">submit</button>
+    </form>
+</body>
+<script>
+    function validation(){
+let userid=document.getElementById("textid").value;
+let regx=/^([a-zA-Z0-9\.-]+)@([a-z0-9-]+)([.])([a-z]{2,20})(.[a-z]{2-8})?$/;
+if(regx.test(userid)) {
+    alert("valid username");
+    document.getElementById("textid").style.border="2px solid green";
+}
+else{
+    document.getElementById("textid").style.border="1px solid red";
+    document.getElementById("lblid").style.visibility="visible";
+    return false;
+}
+    }
+</script>
+</html>

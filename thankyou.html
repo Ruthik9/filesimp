@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>.</h1>
+
+</body>
+<script>
+  async function asyncfun(){
+    const mm=new Promise(function(acc,nako){
+      setTimeout(() => {
+          acc("executed");
+      }, 2000);
+    })
+      await   mm.then(function(res){
+    console.log(res);
+    })
+    }
+    console.log("completed")
+    asyncfun(); 
+
+
+    const make=new Promise(function(accept,refuse){
+accept("ok");
+refuse("cancel");
+    })
+    .then(function(show){
+console.log(show);
+    }).catch(function(err){
+        console.log(err)
+    })
+    </script>
+</html>

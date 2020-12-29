@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="paragraph"></p>
+</body>
+<script>
+    let list=["z","banana","apple","cherry","mango","papaya"];
+   list.forEach(function(answer){
+       list.sort();
+       return  answer;
+   });
+    console.log(list);
+
+
+     oldfunc=(callback)=>{
+console.log("this is start");
+callback();
+    }
+    oldfunc( newone =>console.log("this is end"))
+
+    class students{
+constructor(firstname,lastname,age,id){
+this.name=firstname;
+this.lname=lastname;
+this.sage=age;
+this.sid=id;
+}
+BioData(){
+    document.getElementById("paragraph").innerHTML=this.name;
+}}
+let student1= new students("unknown");
+student1.BioData();
+
+
+
+function myfunc(){
+return new Promise(function(resolve,reject){
+let num=1;
+if(num==1){
+resolve("right")
+}
+else{
+reject("mat karo yaar shit")
+}
+
+})
+.then(function(success){
+console.log(success)
+})
+.catch(function(failed){
+console.log(failed)
+})
+}
+myfunc();
+</script>
+</html>

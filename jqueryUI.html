@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./jqueryui/jquery-ui.css">
+    <link rel="stylesheet" href="./jqueryui/jquery-ui.structure.css">
+    <link rel="stylesheet" href="./jqueryui/jquery-ui.theme.css">
+
+
+</head>
+<style>
+
+    #myDIV {
+        border: 2px solid black;
+        padding: 10px;
+
+    }
+
+    #panel h3 {
+        background-color: #d62130;
+        font-size: 15px;
+        color: white;
+    }
+
+    #tabtopic a{
+        background-color: rgb(29, 100, 58);
+        color: white;
+    }
+</style>
+
+<body>
+    <div id="myDIV">
+        <h2>Introduction to JQuery UI Library</h2>
+        <div id="textid" title=" My Calender"></div>
+        <img src="100.jpg" width="200px" height="70px" id="imgid" title="you used tooptip">
+        <div id="panel">
+            <h3>telusko learning</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, aperiam?</p>
+            <h3>Lorem ipsum, dol</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, culpa! Lorem ipsum dolor, sit amet
+                consectetur adipisicing elit
+                . Magni laborum necessitatibus quidem ullam quia distinctio voluptatum delectus esse tempore eoslo.l
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo culpa vero provident eaque, labo
+                rum voluptas repudiandae officia sunt animi atque voluptates earum repellendus sit reprehenderit
+                nesciunt doloremque asperiores quas voluptatibus?</p>
+            <h3>lorem lorem demo</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, et.</p>
+            <h3>MKBHD</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum placeat suscipit totam maxime maiores.
+                Dolor nesciunt quod debitis quaerat eaque.</p>
+        </div>
+        <button id="cmonth">CHANGE</button>
+    </div>
+    <div id="messagebox" title="error">
+        <p>Failed to delete.</p>
+    </div>
+    <button id="subbtn">submit</button>
+    <label for="enLabel" id="cityID">Enter your city:</label>
+    <input type="text" id="enLabel">
+    <div id="tabtopic">
+        <ul>
+            <li><a href="#tabtopic-1">topic 1</a></li>
+            <li><a href="#tabtopic-2">topic 2</a></li>
+            <li><a href="#tabtopic-3">topic 3</a></li>
+        </ul>
+        <div id="tabtopic-1">
+            <h2>topic 1</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam reprehenderit tempore officiis facere r
+                eiciendis numquam porro ut eveniet cum fuga. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Quis, sunt maio
+                res obcaecati suscipit consectetur adipisci! Amet quae, quod voluptate quas dolorem nostrum ut ex
+                nesciunt repudiandae? Beat
+                ae reprehenderit architecto minima!</p>
+        </div>
+        <div id="tabtopic-2">
+            <h2>topic 2</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam reprehenderit tempore officiis facere r
+                eiciendis numquam porro ut eveniet cum fuga. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Quis, sunt maio
+                res obcaecati suscipit consectetur adipisci! Amet quae, quod voluptate quas dolorem nostrum ut ex
+                nesciunt repudiandae? Beat
+                ae reprehenderit architecto minima!</p>
+        </div>
+        <div id="tabtopic-3">
+            <h2>topic 3</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam reprehenderit tempore officiis facere r
+                eiciendis numquam porro ut eveniet cum fuga. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Quis, sunt maio
+                res obcaecati suscipit consectetur adipisci! Amet quae, quod voluptate quas dolorem nostrum ut ex
+                nesciunt repudiandae? Beat
+                ae reprehenderit architecto minima!</p>
+        </div>
+    </div>
+</body>
+<script src="./jquery.js" type="text/javascript"></script>
+<script src="./jqueryui/jquery-ui.js" type="text/javascript"></script>
+<script>
+    $("#textid").datepicker({
+        numberOfMonths: 1,
+        changeYear: true,
+        changeMonth: true,
+        showWeek: true,
+        weekHeader: "weaks",
+        showOtherMonths: true,
+        minDate: new Date(2017, 0, 5),
+        maxDate: new Date(2021, 0, 1),
+    });
+    $("#cmonth").click(function () {
+        $("#textid").datepicker("option", "numberOfMonths", 2);
+    })
+
+    //tooptip
+    $("#imgid").tooltip({
+        //track:true,
+        show: {
+            effect: "pulsate",
+            duration: 3000,
+        },
+        hide: {
+            effect: "bounce",
+            duration: 3000,
+        }
+    });
+    //Accordian widget
+    $("#panel").accordion({
+        collapsible: true,
+        animate: 100,
+        active: 1,
+        heightStyle: true,
+        icons: { header: "ui-icon-info", activeHeader: " ui-icon-circle-close" },//icons:{header:"ui-icon-info",activeHeader:" ui-icon-circle-minus"}  jar active asel tar header yenar ani click kelya var active header
+
+    });
+    //message box widgets
+    /*modal: true,
+    show:{
+        effect:"pulsate",
+        duration:3000,
+    },
+    hide:{
+        effect:"explode",
+        duration:3000,
+    $("#messagebox").dialog({
+        title: "pop up box",
+        draggable: false,
+        resizable: true,
+        height: 250,
+        width: 350,
+        buttons: [{
+            text: "close",
+            icon: "ui-icon-trash",
+            click: function () {
+                $(this).dialog("close")
+            },
+        },
+        {
+            text: "OK",
+            icon: "ui-icon-check",
+            click: function () {
+                $(this).dialog("close")
+            },
+        },],
+    });
+*/
+    // autocomplete
+    let cities = ["Mumbai", "New Delhi", "Pune", "Mysore", "Indore", "New York", "Los Angeles", "Manhattan", "Tokyo", "New Jersey"];
+    $("#enLabel").autocomplete({
+        source: cities,
+    },
+        {
+            autoFocus: true,
+            delay: 500,
+            minLength: 2,
+        });
+    // tabs widgets
+    $("#tabtopic").tabs({
+        collapsible: true,
+        event: "mouseover",
+    });
+
+</script>
+
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shopping form</title>
+    <link href="shopping.css" rel="stylesheet">
+    <script src="shopping.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div>
+        <form action="thankyou.html" onsubmit="return validate()" id="formid">
+            <h1>macy's</h1>
+            <h3>shipping</h3>
+            <h6>shipping address</h6>
+            <hr>
+            <label ckass="lblid">First name</label>
+            <input type="text" id="userid" size="60" placeholder="Firstname">
+            <label class="lblid">Last name</label>
+            <input type="text" id="lastid" size="60" placeholder="Lastname">
+            <label class="add">Address line 1</label>
+            <input type="text" id="address1" size="60" placeholder="Apt,Suite,Bldg,Floor,etc">
+            <label class="add">Address line 2
+                <span>(optional)</span>
+            </label>
+            <input type="text" id="address2" placeholder="Apt,Suite,Bldg,Floor,etc" size="60">
+            <span>ZIP code</span><input type="text" id="pincode" size="27" placeholder="eg:- 400053">
+            <label id="lblcity">city</label>
+            <select id="city">
+                <option value="mumbai">mumbai</option>
+                <option value="thane">thane</option>
+                <option value="Navi Mumbai">Navi Mumbai</option>
+            </select>
+            <label id="lblmob"><span>Phone number</span></label>
+            <input type="text" id="mobno" size="35" placeholder="eg:- 88689855328" >
+            <label id="lblstate">
+                <span>state</span>
+            </label>
+            <select id="state">
+                <option value="maharashtra">maharashtra</option>
+                <option value="thane">thane</option>
+                <option value="Navi Mumbai">Navi Mumbai</option> //#135e8d
+            </select> //#49157f; //#0b527e;
+<br>
+            <button type="submit">Register</button>
+            <button type="reset" id="btnsub">Reset</button>
+        </form>
+    </div>
+</body>
+
+</html>

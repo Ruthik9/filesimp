@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p class="pp">this is paragraph</p>
+    <p class="pp">this is paragraph</p>
+    <p class="pp">this is paragraph</p>
+    <p>this is paragraph</p>
+    <p>this is paragraph</p>
+    <p>this is paragraph</p>
+    <p>this is paragraph</p>
+    <button onclick="press()">click</button>
+    <p id="pa"></p>
+    <p id="pe"></p>
+    <button onclick="asc()">sort</button>
+</body>
+<script>
+    let fruits = ["banana", "grapes", "cherry", "apple"];
+
+    fruits.forEach(function (val) {
+        fruits.sort();
+        return val;
+    })
+    document.getElementById("pa").innerHTML = fruits;
+
+    let veg = ["zzzz","aaa", "cabbage", "tomato", "potato", "onion"];
+let num=[10,20,40,2,3,5,110]
+num.sort(function(a,b){
+    return b-a;
+
+})
+document.getElementById("pe").innerHTML=num+" "+"these are sorted numbers";
+
+
+
+
+
+
+
+    const para = document.getElementsByClassName("p");
+    for (let i = 0; i < para.length; i++) {
+        para[i].style.color = "red";
+    }
+
+</script>
+
+</html>

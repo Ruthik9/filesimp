@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form validation using javascript</title>
+</head>
+<style>
+#invalidlb{
+    visibility:hidden;
+}
+#invaliduser{
+    visibility: hidden;
+}
+</style>
+
+<body>
+    <form action="message.html" onsubmit="return validate()">
+        <span>usernsme:</span>
+        <input type="text" id="user" placeholder="username">
+        <label id="invaliduser"><i>Invalid</i></label><br><br>
+      <span>password:</span>
+        <input type="password" id="pass" placeholder="password">
+        <label id="invalidlb"><i>Invalid</i></label>
+        <br>
+        <button type="submit" id="submit">submit</button>
+    </form>
+
+</body>
+<script>
+    function validate() {
+        const userid = document.getElementById("user");
+        const passid = document.getElementById("pass");
+        if (userid.value.trim()=="") {
+           // alert("blank username");
+            userid.style.border="1px solid red";
+            document.getElementById("invaliduser").style.visibility="visible";
+            return false;
+        }
+        else if (passid.value.trim()=="") {
+           // alert("blank password");
+            passid.style.border="2px solid red";
+            document.getElementById("invalidlb").style.visibility="visible";
+            return false;
+        }
+        else if (passid.value.trim().length < 5) {
+            alert("password is weak");
+            return false;
+        }
+        else{
+            alert("login successfully");
+           // return true;
+        }
+
+    }
+</script>
+
+</html>

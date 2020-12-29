@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    .main {
+        height: 100vh;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 40px 5fr 3fr 50px;
+    }
+
+    #c1 {
+        grid-column: 1/-1;
+        background-color: lightpink;
+    }
+
+    #c2 {
+        grid-column: 1/2;
+        background-color: rgb(209, 154, 191);
+    }
+
+    #c3 {
+        grid-column: ;
+        background-color: palevioletred;
+    }
+
+    #c4 {
+        background-color: rgb(209, 90, 110);
+    }
+
+    #c6 {
+        grid-column: 1/-1;
+        background-color: plum;
+    }
+
+    #nav {
+        grid-column: 1/-1;
+        background-color: rgb(15, 10, 10);
+        display: flex;
+        overflow: hidden;
+        background-color: black;
+    }
+
+    #nav a {
+        color: white;
+        padding: 10px 20px;
+        transition: .5s;
+        text-transform: uppercase;
+        font-size: 15px;
+        text-decoration: none;
+        font-family: fantasy;
+        display: inline-block;
+    }
+
+    #search {
+        padding: 9px;
+        position: absolute;
+        right: 0;
+        top: 1px;
+    }
+
+    #nav a:hover {
+        transform: scale(1.1);
+        color: white;
+        background-color: red;
+    }
+
+    #content {
+        position: absolute;
+        top: 40px;
+        overflow: hidden;
+        display: none;
+        box-shadow: 4px 4px 5px black;
+        background-color: white;
+    }
+
+    #content a {
+        width: 100px;
+        display: block;
+        background-color: #fff;
+        color: black;
+    }
+
+    #content a:hover {
+        color: white;
+        background-color: red;
+    }
+
+    .drop:hover #content {
+        display: block;
+    }
+
+    .btn {
+        background-color: black;
+        color: white;
+        text-transform: uppercase;
+        font-size: 15px;
+        padding: 10px 20px;
+        font-family: fantasy;
+        outline: none;
+        border: none;
+        transition: .5s;
+        overflow: hidden;
+    }
+
+    .btn:hover {
+        color: white;
+        background-color: red;
+        transform: scale(1.1);
+    }
+</style>
+
+<body>
+    <div class="main">
+        <div id="nav">
+            <a href="#">home</a>
+            <a href="#">services</a>
+            <a href="#">about</a>
+            <a href="#">contact us</a>
+            <div class="drop">
+                <button class="btn">more</button>
+                <div id="content">
+                    <a href="">help</a>
+                    <a href="">faq</a>
+                    <a href="">info</a>
+                </div>
+            </div>
+            <input type="search" name="" id="search" placeholder="search here">
+        </div>
+
+        <div id="c1">main</div>
+        <div id="c2">content2</div>
+        <div id="c3">content3</div>
+        <div id="c4">4</div>
+        <div id="c6">footer</div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+body{
+    margin:2px;
+    padding: 0;
+    box-sizing: border-box;
+    background-color:#0b527e;
+    height: 100%;
+    width: 100%;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 200;
+    justify-content: center;
+    color: #fff;
+    font-family: 'Quicksand', sans-serif;
+}
+div{
+    position:absolute;
+    width:100%;
+    top: 5px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    padding: 20px;
+    }
+.lblid,#userid,#lastid,#address1,#address2,#lblcity{
+    display: block;
+    margin-top:5px;
+}
+#lblmob{
+    margin-bottom: 10px;
+    display: block;
+}
+.add{
+    margin-top: 15px;
+}
+#lblcity{
+    display: inline-block;
+    margin-top: 25px;
+}
+input[type=text]{
+    padding: 12px 10px;
+    border-radius: 15px;
+    outline: none;
+    margin-bottom: 10px;
+}
+#city,#state{
+    padding: 12px 10px;
+    margin-top: 5px;
+    border-radius: 15px;
+    outline: none;
+}
+#lblstate{
+    margin-top: 10px;
+    display: inline-block;
+}
+button{
+    background-color: #fff;
+    color: black;
+    border-radius: 15px;
+    padding:  7px 10px;
+    outline: none;
+    border: 3px solid rgb(240, 85, 67);
+    margin-top: 10px;
+    width:80px ;
+    display: inline-block;
+    transition: .6s;
+    font-weight: 555;
+    overflow: hidden;
+}
+#btnsub{
+    margin-left: 10px;
+}
+button:hover{
+    color: white;
+    background-color: rgb(240, 85, 67);
+   border: none;
+}
+input[type=text]:focus{
+    border: 3px solid #2B6CD1;
+}

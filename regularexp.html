@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>regular expression in javascript</title>
+</head>
+<style>
+    #subbtn {
+        margin-top: 25px;
+        display: block;
+    }
+
+    #lblid {
+        visibility: hidden;
+        color: red;
+    }
+</style>
+
+<body>
+    <form action="date.html" onsubmit="return validate()">
+        <input type="text" id="usern" placeholder="username">
+        <label id="lblid"><i>Invalid Username</i></label><br>
+        <input type="text" id="numid" placeholder="mobile no.">
+        <button type="submit">submit</button>
+
+    </form>
+</body>
+<script>
+    function validate() {
+        let userid = document.getElementById("usern").value;
+        let regx = /^[5-9][a-z]{8}[0]$/;
+        let mobile = document.getElementById("numid").value;
+        let mobno = /^[7-9][0-9]{9}$/;
+        if (regx.test(userid)) {
+            alert("valid username");
+            //  return true;
+        }
+        else if (mobno.test(mobile)) {
+            alert("valid mobile number");
+
+        }
+        else if (mobno.value.trim()=="") {
+            alert("no blank values allowed");
+
+        }
+        else {
+            //  alert("Invalid username");
+            document.getElementById("usern").style.border = "1px solid red";
+            document.getElementById("lblid").style.visibility = "visible";
+            document.getElementById("numid").style.border = "1px solid red";
+            return false;
+        }
+    }
+</script>
+
+</html>

@@ -1,0 +1,210 @@
+<html>
+
+<head></head>
+<style>
+    .body {
+        background-color: lightgreen;
+    }
+
+    .font {
+        font-size: 25px;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <!--  <button id="btn">click</button>
+    <p id="para">new paragraph</p>
+
+    <form action="">
+        <label for="user">Name</label>
+        <input type="email" placeholder="username" id="user" oninvalid="" required><br> <br>
+        <label for="class">Class</label>
+        <input type="text" placeholder="classname" id="class"><br> <br>
+        <label for="">country</label>
+        <select id="">
+            <option value="">india</option>
+            <option value="">america</option>
+            <option value="">france</option>
+            <option value="">Italy</option>
+            <option value="">spain</option>
+
+        </select>
+        <input type="submit" value="submit"><br><br><br>
+        
+    </form>
+-->
+<form action="message.html" onsubmit="return subfun()">
+    <label for="Fname">Name:</label>
+    <input type="text"  id="Fname"><br><br>
+    <label for="pass">Password</label>
+    <input type="password"  id="pss"><br><br>
+   <button type="submit">submit</button>
+</form>
+
+</body>
+<script>
+function subfun(){
+ var uname= document.getElementById("Fname");
+    var Pswd=document.getElementById("pss");
+    if(!uname.value.trim() || !Pswd.value.trim()){ //uname.value.trim()="" 
+       alert("no blank values allowed");
+       return false;
+    }
+    else{
+        alert("successfully login")
+      return true;
+    }
+}
+
+
+ // var cfpass=document.getElementById("confpass").value;
+  // <label for="pass">Confirm Password</label>
+  //  <input type="password" name="" id="confpass"><br><br>
+
+
+    class student {
+        constructor(Name, Age, Class) {
+            this.firstName = Name;
+            this.MyAge = Age;
+            this.MyClass = Class;
+        }
+        BioData() {
+            console.log(" my name is " + " " + this.firstName + " " + " my age is" + " " + this.MyAge + " " + " my Division is" + " " + this.MyClass);
+        }
+    }
+    let obj1 = new student("vinod", 22, "Bsc-CS");
+    let obj2 = new student("Harry", 23, "Bsc-IT");
+    obj1.BioData();
+    obj2.BioData();
+
+
+
+
+
+
+
+    class Employee {
+
+        constructor(EmpName, EmpAge, EmpId) {
+            this.name = EmpName;
+            this.age = EmpAge;
+            this.Id = EmpId;
+        }
+        Message() {
+            console.log("EmployeeId is" + " " + this.Id + "Age is" + this.age + " " + "name is" + " " + this.name)
+        }
+    }
+    class Players extends Employee {
+        constructor(EmpName, EmpAge, EmpId, game) {
+            super(EmpName, EmpAge, EmpId);
+            this.plyGame = game;
+
+        }
+        PlyMessage() {
+            console.log("EmployeeId is" + " " + this.Id + "Age is" + this.age + " " + "name is" + " " + this.name+this.plyGame)
+        }
+
+    }
+
+
+
+    let EmpObj = new Players("ritik", 21, 337, "soccer");
+    let EmpObj2 = new Employee("yash", 21, 327);
+    EmpObj.PlyMessage();
+    EmpObj2.Message();
+
+
+
+
+
+
+
+
+
+
+    var st = setInterval(() => {
+        var clock = new Date();
+        var sec = clock.toLocaleTimeString();
+        //console.log(sec);
+    }, 1000);
+
+
+
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function start() {
+        alert("hello");
+    }
+    //start();
+    const stop = setInterval(start, 555000);
+
+
+    setTimeout(() => { clearTimeout(stop) }, 10000);
+
+
+
+
+
+
+
+
+
+    /*   document.getElementById("btn").addEventListener("mouseover", function () {
+         document.body.style.backgroundColor = "tomato";
+     }); */
+    /*   document.getElementById("btn").addEventListener("click", myfunc);
+
+   function myfunc() {
+       document.getElementById("para").removeEventListener("dblclick",newfunc);
+   } */
+    
+class cricketer{
+constructor(cricName,cricAge,cricGen){
+this.PlayName=cricName;
+this.PlayAge=cricAge;
+this.PlayGen=cricGen;
+}
+ability(){
+console.log(this.PlayName+this.PlayAge+this.PlayGen);
+}
+}
+class FemalePlayer extends cricketer {
+constructor(cricName,cricAge,cricGen,criCap){
+    super(cricName,cricAge,cricGen)
+    this.Captain=criCap;
+}
+speciality(){
+    console.log(this.PlayName+this.PlayAge+this.PlayGen+this.Captain)
+}
+}
+let Player= new cricketer("sachin",43,"Male");
+Player.ability();
+let NewPlayer= new FemalePlayer("sneha",23,"female","Captian");
+NewPlayer.speciality();
+
+
+</script>
+
+
+</html>

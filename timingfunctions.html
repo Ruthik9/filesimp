@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="para"></h2>
+</body>
+<script>
+  
+const prom=new Promise(function(resolve,reject){
+let a=1;
+if(a==2){
+resolve("your answer is correct");
+
+}else{
+    reject("your answer is wrong")
+}
+}).then(function(success){
+console.log("this is in the then"+success)
+}).catch(function(failed){
+console.log("this is in catch"+failed)
+})
+
+
+
+const video1=new Promise(function(resolve,reject){
+resolve("video 1 recorded");
+})
+const video2=new Promise(function(resolve,reject){
+resolve("video 2 recorded");
+})
+const video3=new Promise(function(resolve,reject){
+resolve("video 3 recorded");
+})
+Promise.all([video1,video2,video3]) // .race takla tar jasa first wala resolve honar toh run karnar.
+.then(function(pass){
+console.log(pass)
+}).catch(function(fail){
+console.log(fail)
+})
+
+
+ new Promise(function(resolve,reject){
+let number=1;
+if(number==11){
+    resolve("success");
+}
+else{
+    reject("fail");
+}
+
+}).then(function(successful){ 
+console.log("code is correct"+successful)
+}).catch(function(err){
+console.log("error"+err);
+})
+
+async function asyncfun(){
+const mm=new Promise(function(acc,nako){
+  setTimeout(() => {
+      acc("executed");
+  }, 2000);
+})
+await mm.then(function(res){
+console.log(res);
+})
+}
+console.log("completed")
+asyncfun(); 
+function preview(callback){
+callback();
+}
+preview(function newfunction(){
+    console.log("this is in another function");
+});
+
+
+
+
+
+
+const promises=new Promise(function(resolve,reject){
+    let xxx=11
+    if(xxx==1){
+
+        resolve("successfully success");
+    }
+    else{
+        reject("failed to success");
+    }
+
+
+
+}).then(function(check){
+    console.log(check)
+}).catch(function(fail){
+    console.log(fail)
+})
+
+
+
+
+
+</script>
+</html>
